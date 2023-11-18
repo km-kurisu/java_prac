@@ -1,37 +1,44 @@
-import java.applet.*;
 import java.awt.*;
-import java.awt.event.*;
+import javax.swing.*;
 
-public class Prac_4 extends Frame{
-    MenuBar mb;
-    MenuItem m1,m2,m3,m4;
-    Menu mn;
-    MenuShortcut msb;
+public class Prac_4 extends JFrame {
+   JMenuBar menuBar;
+   JMenu fileMenu, editMenu, helpMenu;
+   JMenuItem newMenuItem, openMenuItem, saveMenuItem, exitMenuItem;
 
-    public Prac_4(){
-        setTitle("MenuBar");
-        setSize(500,500);
-        setLayout(null);
+   public Prac_4() {
+      setTitle("Menu Demo");
+      setSize(300, 200);
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        msb = new MenuShortcut(KeyEvent.VK_X);
-        mn = new Menu("File");
-        mb = new MenuBar();
-        m1 = new MenuItem("New File");
-        m2 = new MenuItem("Open File");
-        m3 = new MenuItem("Save File");
-        
-        mn.add(m1);
-        mn.add(m2);
-        mn.add(m3);
-        
-        setMenuBar(mb);
+      menuBar = new JMenuBar();
 
-    }
+      fileMenu = new JMenu("File");
+      newMenuItem = new JMenuItem("New");
+      openMenuItem = new JMenuItem("Open");
+      saveMenuItem = new JMenuItem("Save");
+      exitMenuItem = new JMenuItem("Exit");
+      fileMenu.add(newMenuItem);
+      fileMenu.add(openMenuItem);
+      fileMenu.add(saveMenuItem);
+      fileMenu.addSeparator();
+      fileMenu.add(exitMenuItem);
 
-    public static void main(String[] args) {
-        Prac_4 pr = new Prac_4();
-        pr.setVisible(true);
-    }
+      editMenu = new JMenu("Edit");
+
+      helpMenu = new JMenu("Help");
+
+      menuBar.add(fileMenu);
+      menuBar.add(editMenu);
+      menuBar.add(helpMenu);
+
+      setJMenuBar(menuBar);
+   }
+
+   public static void main(String[] args) {
+      Prac_4 Prac_4 = new Prac_4();
+      Prac_4.setVisible(true);
+   }
 }
 
 /*<APPLET CODE="Prac_4.class" 
