@@ -14,7 +14,7 @@ public class Prac_5 extends JFrame implements ActionListener{
         c.setLayout(card);
 
         b1 = new JButton("Apple");
-        b2 = new JButton("JJk");
+        b2 = new JButton("JJK");
         b3 = new JButton("Orange");
 
         b1.addActionListener(this);
