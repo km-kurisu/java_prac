@@ -1,6 +1,3 @@
-//Q1. write a program to demonstrate textbox, radio button and checkbox.
-
-
 import java.applet.*;
 import java.awt.*;
 import javax.swing.*;
