@@ -22,7 +22,3 @@ public class Prac_12 {
     }
 }
 
-/*<APPLET CODE="Prac_12.class" 
-    HEIGHT=600
-    WIDTH=600>
-</APPLET> */
